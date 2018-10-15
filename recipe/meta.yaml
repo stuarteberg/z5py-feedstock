@@ -23,7 +23,7 @@ requirements:
     - boost-cpp
     - numpy
     - xtensor >=0.17.1,<0.18
-    - xtensor-python >=0.20.1,<0.21
+    - xtensor-python >=0.19,<0.20
     - blosc
     - bzip2
     - xz
