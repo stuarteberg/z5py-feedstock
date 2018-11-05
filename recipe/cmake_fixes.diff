@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 9b69663..a64f2ed 100644
+index 9b69663..e07bba6 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -9,7 +9,9 @@ project(z5)
@@ -22,6 +22,32 @@ index 9b69663..a64f2ed 100644
  
  if(MSVC)
      add_definitions(/DNOMINMAX)
+@@ -180,12 +182,21 @@ endif()
+ 
+ find_package(pybind11 REQUIRED)
+ 
+-# numpy
+-if(MSVC)
+-    set(PYBIND11_CPP_STANDARD /std:c++14)
++
++if (NOT "${CMAKE_CXX_FLAGS}" MATCHES "-std=c\\+\\+17")
++    if(MSVC)
++        set(PYBIND11_CPP_STANDARD /std:c++14)
++    else()
++        set(PYBIND11_CPP_STANDARD -std=c++14)
++    endif()
+ else()
+-    set(PYBIND11_CPP_STANDARD -std=c++14)
++    if(MSVC)
++        set(PYBIND11_CPP_STANDARD /std:c++17)
++    else()
++        set(PYBIND11_CPP_STANDARD -std=c++17)
++    endif()
+ endif()
++# numpy
+ find_package(NumPy REQUIRED)
+ include_directories(${NUMPY_INCLUDE_DIRS})
+ message(STATUS "Using numpy from ${NUMPY_INCLUDE_DIRS}")
 diff --git a/src/python/CMakeLists.txt b/src/python/CMakeLists.txt
 index d27a37f..8234d18 100644
 --- a/src/python/CMakeLists.txt
