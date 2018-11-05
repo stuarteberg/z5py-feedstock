@@ -23,7 +23,7 @@ index 9b69663..a64f2ed 100644
  if(MSVC)
      add_definitions(/DNOMINMAX)
 diff --git a/src/python/CMakeLists.txt b/src/python/CMakeLists.txt
-index d27a37f..bed5fc7 100644
+index d27a37f..8234d18 100644
 --- a/src/python/CMakeLists.txt
 +++ b/src/python/CMakeLists.txt
 @@ -84,10 +84,18 @@ macro(addPythonModule)
@@ -41,7 +41,7 @@ index d27a37f..bed5fc7 100644
 +            PUBLIC
 +            ${PYTHON_LIBRARIES}
 +        )
-+    ENDIF
++    ENDIF()
 +
      # create module dir
      file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/python/${ADD_PY_MOD_NESTED_NAME})
