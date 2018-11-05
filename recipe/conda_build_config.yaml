@@ -1,4 +1,5 @@
-c_compiler:    # [linux]
+c_compiler:    # [unix]
   - gcc        # [linux]
-cxx_compiler:  # [linux]
-  - gxx        # [linux]
+  - clang      # [osx]
+cxx_compiler:  # [unix]
+  - clangxx    # [osx]
