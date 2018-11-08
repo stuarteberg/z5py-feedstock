@@ -1,5 +1,5 @@
-{% set version = "1.1.0" %}
-{% set checksum = "ae83b04b0258457ac393781b9e7c40d99ea7b04dd3dbf9b884727d527feab090" %}
+{% set version = "1.1.1" %}
+{% set checksum = "69449bc05255629ade05449f75c19d8d1f7cf4dea293cb7c5ff20bbd5221f50c" %}
 
 package:
   name: z5py
@@ -8,8 +8,6 @@ package:
 source:
     url: https://github.com/constantinpape/z5/archive/{{ version }}.tar.gz
     sha256: {{ checksum }}
-    patches:
-      - cmake_fixes.diff
 
 build:
   number: 1000
