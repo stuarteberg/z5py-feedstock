@@ -1,25 +1,17 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 boost_cpp:
 - 1.68.0
-build_number_decrement:
-- '0'
 bzip2:
 - '1'
 c_compiler:
-- clang
+- vs2015
 channel_sources:
-- conda-forge/label/gcc7,defaults
+- conda-forge,defaults
 channel_targets:
-- conda-forge gcc7
+- conda-forge main
 cxx_compiler:
-- clangxx
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
+- vs2015
 numpy:
-- '1.9'
+- '1.11'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -28,19 +20,22 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
+  vc:
+    max_pin: x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
 python:
-- '2.7'
+- '3.7'
+vc:
+- '14'
 xz:
 - '5.2'
 zip_keys:
-- - c_compiler
+- - python
+  - vc
+  - c_compiler
   - cxx_compiler
-  - channel_sources
-  - channel_targets
-  - build_number_decrement
 zlib:
 - '1.2'
