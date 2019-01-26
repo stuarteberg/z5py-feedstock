@@ -1,5 +1,5 @@
-{% set version = "1.4.0" %}
-{% set checksum = "910be0c140ce4098da080aa0289db5d760460c0d60e28e8aed9e811a16bf3408" %}
+{% set version = "1.4.1" %}
+{% set checksum = "0efc03aa7a42811e6630aa3ca7fa717df7824feeb9fd5e216e5739ba5f763403" %}
 
 package:
   name: z5py
@@ -10,7 +10,7 @@ source:
     sha256: {{ checksum }}
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
@@ -22,8 +22,9 @@ requirements:
     - python
     - boost-cpp
     - numpy
-    - xtensor >=0.18.1,<0.19
-    - xtensor-python >=0.21,<0.22
+    - xtensor >=0.19,<0.20
+    - xtensor-python >=0.22,<0.23
+    - xsimd >=7,<8
     - blosc
     - bzip2
     - xz
