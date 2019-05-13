@@ -28,6 +28,7 @@ requirements:
     - blosc
     - bzip2
     - xz
+    - lz4
     - zlib
     - nlohmann_json
   run:
