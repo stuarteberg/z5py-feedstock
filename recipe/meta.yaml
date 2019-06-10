@@ -29,7 +29,7 @@ requirements:
     - bzip2
     - xz
     - zlib
-    - lz4
+    - lz4-c
     - nlohmann_json
   run:
     - python
