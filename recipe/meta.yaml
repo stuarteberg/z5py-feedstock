@@ -20,7 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - boost-cpp
+    - boost-cpp 1.69.0
     - numpy
     - xtensor >=0.19,<0.20
     - xtensor-python >=0.22,<0.23
@@ -33,7 +33,7 @@ requirements:
     - nlohmann_json
   run:
     - python
-    - boost-cpp
+    - boost-cpp =1.69
     - {{ pin_compatible('numpy') }}
     - blosc
     - bzip2
