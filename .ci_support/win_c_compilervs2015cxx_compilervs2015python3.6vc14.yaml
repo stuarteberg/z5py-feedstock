@@ -1,7 +1,5 @@
 CMAKE_GENERATOR:
 - NMake Makefiles
-boost_cpp:
-- 1.70.0
 bzip2:
 - '1'
 c_compiler:
@@ -17,8 +15,6 @@ lz4_c:
 numpy:
 - '1.14'
 pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
   bzip2:
     max_pin: x
   lz4-c:
