@@ -27,9 +27,9 @@ requirements:
     - xsimd >=7,<8
     - blosc
     - bzip2
+    - lz4-c
     - xz
     - zlib
-    - lz4-c
     - nlohmann_json
   run:
     - python
@@ -37,6 +37,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - blosc
     - bzip2
+    - lz4-c
     - xz
     - zlib
     - six
