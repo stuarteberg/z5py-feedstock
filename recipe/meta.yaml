@@ -33,7 +33,7 @@ requirements:
     - nlohmann_json
   run:
     - python
-    - boost-cpp =1.69
+    - boost-cpp 1.69.0
     - {{ pin_compatible('numpy') }}
     - blosc
     - bzip2
