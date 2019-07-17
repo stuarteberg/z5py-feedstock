@@ -10,7 +10,7 @@ source:
     sha256: {{ checksum }}
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win and vc<14]
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - boost-cpp 1.69.0
+    - boost-cpp {{ boost_cpp }}*
     - numpy
     - xtensor >=0.19,<0.20
     - xtensor-python >=0.22,<0.23
@@ -33,7 +33,7 @@ requirements:
     - nlohmann_json
   run:
     - python
-    - boost-cpp 1.69.0
+    - boost-cpp {{ boost_cpp }}*
     - {{ pin_compatible('numpy') }}
     - blosc
     - bzip2
